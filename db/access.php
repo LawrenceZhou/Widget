@@ -79,4 +79,15 @@ $capabilities = array(
             'student' => CAP_ALLOW
         )
     ),
+
+    'mod/widget:createvideo' => array(
+        'riskbitmask' => RISK_SPAM,
+        'captype' => 'write',
+        'contextlevel' => CONTEXT_MODULE,
+        'legacy' => array(
+            'teacher' => CAP_ALLOW,
+            'editingteacher' => CAP_ALLOW,
+            'manager' => CAP_ALLOW
+        )
+    ),
 );

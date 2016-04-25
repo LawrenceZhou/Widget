@@ -61,6 +61,9 @@ $PAGE->set_url('/mod/widget/view.php', array('id' => $cm->id));
 $PAGE->set_title(format_string($widget->name));
 $PAGE->set_heading(format_string($course->fullname));
 
+//new added
+$context = context_module::instance($cm->id);
+
 /*
  * Other things you may want to set - remove if not needed.
  * $PAGE->set_cacheable(false);
@@ -74,6 +77,14 @@ echo $OUTPUT->header();
 // Conditions to show the intro can change to look for own settings or whatever.
 if ($widget->intro) {
     echo $OUTPUT->box(format_module_intro('widget', $widget, $cm->id), 'generalbox mod_introbox', 'widgetintro');
+}
+
+if (has_capability('mod/widget:createvideo', $context)) {
+    $test_string = 'you can see it!';
+    echo $OUTPUT->box($test_string);
+}else {
+    $test_string = 'you cannot see it!';
+    echo $OUTPUT->box($test_string);
 }
 
 // Replace the following lines with you own code.

@@ -1,3 +1,5 @@
+THIS IS JUST FOR STUDY, NOT FOR COMMERCIAL. ORIGINAL AUTHOR IS ANNOUNCED BELOW.
+----------------------------------------------
 The following steps should get you up and running with
 this module template code.
 

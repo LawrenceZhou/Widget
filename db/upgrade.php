@@ -161,6 +161,30 @@ function xmldb_widget_upgrade($oldversion) {
     }
 
 
+
+ if ($oldversion < 201604261736) {
+ // Define field cameranumber to be added to widget.
+        $table = new xmldb_table('widget');
+        $field = new xmldb_field('cameranumber', XMLDB_TYPE_INTEGER, '2', null, null, null, '0', 'livestarttime');
+
+        // Conditionally launch add field cameranumber.
+        if (!$dbman->field_exists($table, $field)) {
+            $dbman->add_field($table, $field);
+        }
+
+         // Define field kurentoaddress to be added to widget.
+        $table = new xmldb_table('widget');
+        $field = new xmldb_field('kurentoaddress', XMLDB_TYPE_TEXT, null, null, null, null, null, 'cameranumber');
+
+        // Conditionally launch add field kurentoaddress.
+        if (!$dbman->field_exists($table, $field)) {
+            $dbman->add_field($table, $field);
+        }
+
+        // Widget savepoint reached.
+        upgrade_mod_savepoint(true, 201604261736, 'widget');
+    }
+
     /*
      * And that's all. Please, examine and understand the 3 example blocks above. Also
      * it's interesting to look how other modules are using this script. Remember that

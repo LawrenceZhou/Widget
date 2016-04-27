@@ -21,10 +21,10 @@ navigator.getUserMedia = navigator.getUserMedia ||
 if (navigator.getUserMedia) {
    navigator.getUserMedia({ audio: false, video: { width: 900, height: 900 } },
       function(stream) {
-         var video = document.querySelector('video1');
-         video.src = window.URL.createObjectURL(stream);
-         video.onloadedmetadata = function(e) {
-           video.play();
+         var video1 = document.getElementById("video1");
+         video1.src = window.URL.createObjectURL(stream);
+         video1.onloadedmetadata = function(e) {
+           video1.play();
          };
       },
       function(err) {

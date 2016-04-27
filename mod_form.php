@@ -69,7 +69,7 @@ class mod_widget_mod_form extends moodleform_mod {
 
 //to be edited
         $mform->addElement('date_time_selector', 'livestarttime', get_string('livestarttime', 'widget'));
-        $cameranumbmer_options('1' => 1, '2' => 2, '3' => 3);
+        $cameranumber_options(1 => '1', 2 => '2', 3 => '3');
         $mform->addElement('select', 'cameranumber', get_string('cameranumber', 'widget'), $cameranumber_options);
         $mform->addElement('text', 'kurentoaddress', get_string('kurentoaddress', 'widget'), array('size' => '64'));
 

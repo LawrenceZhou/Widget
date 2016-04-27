@@ -13,5 +13,7 @@ M.mod_widget.init = function(Y) {
 }
 
 M.mod_widget.create_button = function($cameranubmer) {
-    alert('Hello world');
+    <div>
+                    <button type="button">Click Me!</button>
+                    </div>
 }

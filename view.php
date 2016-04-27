@@ -100,9 +100,10 @@ echo $OUTPUT->box($intro_string.$date_string.$end_string);
 
 
 $camera_number_db = $widget->cameranumber;
-echo '<form name="Patient" method="get">';
-echo '<input type="submit" value="Click here to view patient history">';
-echo '</form>';
+for ($i = 1; $i <= $camera_number_db; $i++) {
+echo '<button name="camera'.$i.'">Click to choose the camera</button>';    
+}
+
 //echo $renderer->create_button($camera_number_db);
 
 

@@ -100,7 +100,7 @@ echo $OUTPUT->box($intro_string.$date_string.$end_string);
 
 
 //$camera_number_db = $widget->cameranumber;
-$renderer = $PAGE->get_renderer('mod_widget');
+//$renderer = $PAGE->get_renderer('mod_widget');
 //echo $renderer->create_button($camera_number_db);
 
 

@@ -39,3 +39,5 @@ $string['pluginadministration'] = 'widget administration';
 $string['pluginname'] = 'widget';
 $string['livestarttime'] = 'time to start the live';
 $string['liveduration'] = 'expected duration';
+$string['cameranumber'] = 'number of cameras to use';
+$string['kurentoaddress'] = 'the address of kurento server';

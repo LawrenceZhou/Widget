@@ -23,6 +23,10 @@
  * @copyright 2015 MoodleFreak.com
  * @author    Luuk Verhoeven
  **/
+
+defined('MOODLE_INTERNAL') || die;    
+use plugin_renderer_base;  
+                                                                                          
 class mod_widget_renderer extends plugin_renderer_base {
 
     /**

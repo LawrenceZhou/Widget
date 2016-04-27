@@ -12,7 +12,7 @@ M.mod_widget.init = function(Y) {
     alert('Hello world');
 }
 
-M.mod_widget.create_camera = function() {
+M.mod_widget.create_camera = function(camera_num) {
 
 navigator.getUserMedia = navigator.getUserMedia ||
                          navigator.webkitGetUserMedia ||
@@ -21,10 +21,11 @@ navigator.getUserMedia = navigator.getUserMedia ||
 if (navigator.getUserMedia) {
    navigator.getUserMedia({ audio: false, video: { width: 900, height: 900 } },
       function(stream) {
-         var video1 = document.getElementById("video1");
-         video1.src = window.URL.createObjectURL(stream);
-         video1.onloadedmetadata = function(e) {
-           video1.play();
+      	var videoId = "video"+camera_num.toString();
+         var video = document.getElementById(videoId);
+         video.src = window.URL.createObjectURL(stream);
+         video.onloadedmetadata = function(e) {
+           video.play();
          };
       },
       function(err) {

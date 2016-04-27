@@ -37,9 +37,6 @@ navigator.getUserMedia = navigator.getUserMedia ||
                     video.play();
                 }, errBack);
             }
-
-            // Trigger photo take
-            document.getElementById("snap").addEventListener("click", function() {
-                context.drawImage(video, 0, 0, 487, 365);
+            
             });
 }

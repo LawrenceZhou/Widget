@@ -60,6 +60,7 @@ $event->trigger();
 $PAGE->set_url('/mod/widget/view.php', array('id' => $cm->id));
 $PAGE->set_title(format_string($widget->name));
 $PAGE->set_heading(format_string($course->fullname));
+$PAGE->requires->js('/mod/widget/video.js');
 
 //new added
 $context = context_module::instance($cm->id);

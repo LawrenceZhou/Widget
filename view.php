@@ -80,14 +80,6 @@ if ($widget->intro) {
     echo $OUTPUT->box(format_module_intro('widget', $widget, $cm->id), 'generalbox mod_introbox', 'widgetintro');
 }
 
-if (has_capability('mod/widget:createvideo', $context)) {
-    $test_string = 'you can see it!';
-    echo $OUTPUT->box($test_string);
-}else {
-    $test_string = 'you cannot see it!';
-    echo $OUTPUT->box($test_string);
-}
-
 // Replace the following lines with you own code.
 echo $OUTPUT->heading('Yay! It works!');
 
@@ -99,10 +91,17 @@ $end_string = '. Please pay attention to the time.';
 echo $OUTPUT->box($intro_string.$date_string.$end_string);
 
 
-$camera_number_db = $widget->cameranumber;
-for ($i = 1; $i <= $camera_number_db; $i++) {
-echo '<button name="camera'.$i.'">Click to choose the camera</button>';    
+
+if (has_capability('mod/widget:createvideo', $context)) {
+    $camera_number_db = $widget->cameranumber;
+    for ($i = 1; $i <= $camera_number_db; $i++) {
+    echo '<div><button name="camera'.$i.'">Click to choose the camera</button></div>';    
+    }
+}else {
+    //
 }
+
+
 
 //echo $renderer->create_button($camera_number_db);
 

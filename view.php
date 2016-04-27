@@ -95,7 +95,7 @@ echo $OUTPUT->box($intro_string.$date_string.$end_string);
 if (has_capability('mod/widget:createvideo', $context)) {
     $camera_number_db = $widget->cameranumber;
     for ($i = 1; $i <= $camera_number_db; $i++) {
-    echo '<div><button name="camera'.$i.'" onclick="M.mod_widget.create_camera()">Click to choose the camera</button></div>';
+    echo '<div><button name="camera'.$i.'" onclick="M.mod_widget.create_camera("video'.$i.'")">Click to choose the camera</button></div>';
     echo '<video id="video'.$i.'" width="487" height="365"></video>';    
     }
 }else {

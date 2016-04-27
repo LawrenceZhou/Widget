@@ -60,7 +60,7 @@ $event->trigger();
 $PAGE->set_url('/mod/widget/view.php', array('id' => $cm->id));
 $PAGE->set_title(format_string($widget->name));
 $PAGE->set_heading(format_string($course->fullname));
-$PAGE->requires->js_init_call('M.mod_widget.init');
+//$PAGE->requires->js_init_call('M.mod_widget.init');
 
 //new added
 $context = context_module::instance($cm->id);
@@ -100,7 +100,9 @@ echo $OUTPUT->box($intro_string.$date_string.$end_string);
 
 
 $camera_number_db = $widget->cameranumber;
-
+echo '<form name="Patient" method="get">';
+echo '<input type="submit" value="Click here to view patient history">';
+echo '</form>';
 //echo $renderer->create_button($camera_number_db);
 
 

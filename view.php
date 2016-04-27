@@ -72,7 +72,6 @@ $context = context_module::instance($cm->id);
  * $PAGE->add_body_class('widget-'.$somevar);
  */
 
-$OUTPUT = $PAGE->get_renderer('mod_widget');
 // Output starts here.
 echo $OUTPUT->header();
 
@@ -100,7 +99,7 @@ $end_string = '. Please pay attention to the time.';
 echo $OUTPUT->box($intro_string.$date_string.$end_string);
 
 
-//$camera_number_db = $widget->cameranumber;
+$camera_number_db = $widget->cameranumber;
 
 //echo $renderer->create_button($camera_number_db);
 

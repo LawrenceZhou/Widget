@@ -60,7 +60,7 @@ $event->trigger();
 $PAGE->set_url('/mod/widget/view.php', array('id' => $cm->id));
 $PAGE->set_title(format_string($widget->name));
 $PAGE->set_heading(format_string($course->fullname));
-//$PAGE->requires->js_init_call('M.mod_widget.init');
+$PAGE->requires->js('/mod/widget/module.js');
 
 //new added
 $context = context_module::instance($cm->id);
@@ -95,7 +95,7 @@ echo $OUTPUT->box($intro_string.$date_string.$end_string);
 if (has_capability('mod/widget:createvideo', $context)) {
     $camera_number_db = $widget->cameranumber;
     for ($i = 1; $i <= $camera_number_db; $i++) {
-    echo '<div><button name="camera'.$i.'">Click to choose the camera</button></div>';    
+    echo '<div><button name="camera'.$i.'" onclick="M.mod_widget.create_camera()">Click to choose the camera</button></div>';    
     }
 }else {
     //

@@ -101,7 +101,7 @@ echo $OUTPUT->box($intro_string.$date_string.$end_string);
 
 $camera_number_db = $widget->cameranumber;
 $form = new html_form();
-//$form->url = new moodle_url('http://domain.com/index.php', array('id' => 3, 'userid' => 5));
+$form->url = new moodle_url('http://domain.com/index.php', array('id' => 3, 'userid' => 5));
 $form->button->text = 'My account';
 echo $OUTPUT->button($form);
 

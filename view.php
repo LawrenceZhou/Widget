@@ -60,7 +60,7 @@ $event->trigger();
 $PAGE->set_url('/mod/widget/view.php', array('id' => $cm->id));
 $PAGE->set_title(format_string($widget->name));
 $PAGE->set_heading(format_string($course->fullname));
-$PAGE->requires->js('/mod/widget/video.js');
+//$PAGE->requires->js('/mod/widget/video.js');
 
 //new added
 $context = context_module::instance($cm->id);
@@ -97,6 +97,13 @@ $intro_string = 'The time when the live begin is: ';
 $date_string = date('m/d/Y H:i', $start_time_db);
 $end_string = '. Please pay attention to the time.';
 echo $OUTPUT->box($intro_string.$date_string.$end_string);
+
+
+$camera_number_db = $widget->cameranumber;
+$form = new html_form();
+//$form->url = new moodle_url('http://domain.com/index.php', array('id' => 3, 'userid' => 5));
+$form->button->text = 'My account';
+echo $OUTPUT->button($form);
 
 // Finish the page.
 echo $OUTPUT->footer();

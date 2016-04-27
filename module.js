@@ -12,7 +12,7 @@ M.mod_widget.init = function(Y) {
     alert('Hello world');
 }
 
-function M.mod_widget.create_camera(camera_num) {
+M.mod_widget.create_camera = function(camera_num) {
 
 navigator.getUserMedia = navigator.getUserMedia ||
                          navigator.webkitGetUserMedia ||

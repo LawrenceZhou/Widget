@@ -21,7 +21,7 @@ navigator.getUserMedia = navigator.getUserMedia ||
 if (navigator.getUserMedia) {
    navigator.getUserMedia({ audio: false, video: { width: 900, height: 900 } },
       function(stream) {
-      	var videoId = "video"+camera_num.toString();
+      	var videoId = "video"+arguments[0].toString();
          var video = document.getElementById(videoId);
          video.src = window.URL.createObjectURL(stream);
          video.onloadedmetadata = function(e) {

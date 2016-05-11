@@ -26,7 +26,8 @@ var args = getopts(location.search,
 {
   default:
   {
-    ws_uri: 'wss://' + location.hostname + ':8433/kurento',
+    /*ws_uri: 'wss://' + location.hostname + ':8433/kurento',*/
+    ws_uri: 'wss://192.168.1.105:8433/kurento',
     ice_servers: undefined
   }
 });

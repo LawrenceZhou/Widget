@@ -122,22 +122,6 @@ if (has_capability('mod/widget:createvideo', $context)) {
 
     <script src="js/index.js"></script>
     <div class="container">
-      <div class="page-header">
-        <h1>Tutorial 1: Hello World (WebRTC in loopback)</h1>
-        <p>
-          This application shows a <i>WebRtcEndpoint</i> connected to itself
-          (loopback). Take a look to the <a href="img/pipeline.png"
-            data-toggle="lightbox" data-title="Hello World Media Pipeline"
-            data-footer="WebRtcEnpoint in loopback">Media Pipeline</a>. To run
-          this demo follow these steps:
-        </p>
-        <ol>
-          <li>Open this page with a browser compliant with WebRTC (Chrome, Firefox).</li>
-          <li>Click on <i>Start</i> button.</li>
-          <li>Grant the access to the camera and microphone. After the SDP negotiation the loopback should start.</li>
-          <li>Click on <i>Stop</i> to finish the communication.</li>
-        </ol>
-      </div>
       <div class="row">
         <div class="col-md-5">
           <h3>Local stream</h3>

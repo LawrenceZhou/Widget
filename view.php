@@ -93,10 +93,60 @@ echo $OUTPUT->box($intro_string.$date_string.$end_string);
 
 
 if (has_capability('mod/widget:createvideo', $context)) {
-    $camera_number_db = $widget->cameranumber;
-    for ($i = 1; $i <= $camera_number_db; $i++) {
-    echo '<div><button name="camera'.$i.'" onclick=M.mod_widget.create_camera("video'.$i.'")>Click to choose the camera</button></div>';
-    echo '<video id="video'.$i.'" width="487" height="365"></video>';    
+    //$camera_number_db = $widget->cameranumber;
+    //for ($i = 1; $i <= $camera_number_db; $i++) {
+    //echo '<div><button name="camera'.$i.'" onclick=M.mod_widget.create_camera("video'.$i.'")>Click to choose the camera</button></div>';
+    //echo '<video id="video'.$i.'" width="487" height="365"></video>';  
+    echo '<meta charset="utf-8">
+    <meta http-equiv="cache-control" content="no-cache">
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="expires" content="0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="img/kurento.png" type="image/png" />
+
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bower_components/demo-console/index.css">
+    <link rel="stylesheet" href="bower_components/ekko-lightbox/dist/ekko-lightbox.min.css">
+    <link rel="stylesheet" href="css/kurento.css">
+
+    <script src="bower_components/adapter.js/adapter.js"></script>
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="bower_components/demo-console/index.js"></script>
+    <script src="bower_components/ekko-lightbox/dist/ekko-lightbox.min.js"></script>
+
+    <script src="bower_components/kurento-utils/js/kurento-utils.js"></script>
+
+    <script src="js/index.js"></script>
+
+        <div class="container">
+      <div class="page-header">
+      </div>
+      <div class="row">
+        <div class="col-md-5">
+          <div class="row">
+            <div class="col-md-12">
+              <a id="call" href="#" class="btn btn-success">
+                <span class="glyphicon glyphicon-play"></span> Presenter</a>
+              <a id="viewer" href="#" class="btn btn-primary">
+                <span class="glyphicon glyphicon-user"></span> Viewer</a>
+              <a id="terminate" href="#" class="btn btn-danger">
+                <span class="glyphicon glyphicon-stop"></span> Stop</a>
+            </div>
+          </div>
+          <br/>
+          <label class="control-label" for="console">Console</label><br><br>
+          <div id="console" class="democonsole">
+            <ul></ul>
+          </div>
+        </div>
+        <div class="col-md-7">
+          <div id="videoBig">
+            <video id="video" autoplay width="640px" height="480px" poster="img/webrtc.png"></video>
+          </div>
+        </div>
+      </div>
+    </div>';  
     }
 }else {
     //

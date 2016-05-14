@@ -97,7 +97,8 @@ if (has_capability('mod/widget:createvideo', $context)) {
     //for ($i = 1; $i <= $camera_number_db; $i++) {
     //echo '<div><button name="camera'.$i.'" onclick=M.mod_widget.create_camera("video'.$i.'")>Click to choose the camera</button></div>';
     //echo '<video id="video'.$i.'" width="487" height="365"></video>';  
-    /*echo '<meta charset="utf-8">
+    //}
+    echo '<meta charset="utf-8">
     <meta http-equiv="cache-control" content="no-cache">
     <meta http-equiv="pragma" content="no-cache">
     <meta http-equiv="expires" content="0">
@@ -146,8 +147,8 @@ if (has_capability('mod/widget:createvideo', $context)) {
           </div>
         </div>
       </div>
-    </div>';*/  
-    }
+    </div>'; 
+    
 }else {
     //
 }

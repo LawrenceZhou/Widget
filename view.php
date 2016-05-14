@@ -129,8 +129,8 @@ if (has_capability('mod/widget:createvideo', $context)) {
             <div class="col-md-12">
               <a id="call" href="#" class="btn btn-success">
                 <span class="glyphicon glyphicon-play"></span> Start</a>
-              <a id="viewer" href="#" class="btn btn-primary" hidden="hidden">
-                <span class="glyphicon glyphicon-user" hidden="hidden"></span> Watch</a>
+              <a id="viewer" href="#" class="btn btn-primary">
+                <span class="glyphicon glyphicon-user" style="display: none"></span> Watch</a>
               <a id="terminate" href="#" class="btn btn-danger">
                 <span class="glyphicon glyphicon-stop"></span> Stop</a>
             </div>
@@ -179,8 +179,8 @@ if (has_capability('mod/widget:createvideo', $context)) {
         <div class="col-md-5">
           <div class="row">
             <div class="col-md-12">
-              <a id="call" href="#" class="btn btn-success" hidden="hidden">
-                <span class="glyphicon glyphicon-play" hidden="hidden"></span> Start</a>
+              <a id="call" href="#" class="btn btn-success">
+                <span class="glyphicon glyphicon-play" style="display: none"></span> Start</a>
               <a id="viewer" href="#" class="btn btn-primary">
                 <span class="glyphicon glyphicon-user"></span> Watch</a>
               <a id="terminate" href="#" class="btn btn-danger">

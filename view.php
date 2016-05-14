@@ -118,7 +118,7 @@ if (has_capability('mod/widget:createvideo', $context)) {
 
     <script src="bower_components/kurento-utils/js/kurento-utils.js"></script>
 
-    <script src="js/index.js"></script>
+    <script src="js/teacher.js"></script>
 
         <div class="container">
       <div class="page-header">
@@ -130,7 +130,7 @@ if (has_capability('mod/widget:createvideo', $context)) {
               <a id="call" href="#" class="btn btn-success">
                 <span class="glyphicon glyphicon-play"></span> Start</a>
               <a id="viewer" href="#" class="btn btn-primary">
-                <span class="glyphicon glyphicon-user" style="display: none"></span> Watch</a>
+                <span class="glyphicon glyphicon-user"></span> Watch</a>
               <a id="terminate" href="#" class="btn btn-danger">
                 <span class="glyphicon glyphicon-stop"></span> Stop</a>
             </div>
@@ -170,7 +170,7 @@ if (has_capability('mod/widget:createvideo', $context)) {
 
     <script src="bower_components/kurento-utils/js/kurento-utils.js"></script>
 
-    <script src="js/index.js"></script>
+    <script src="js/student.js"></script>
 
         <div class="container">
       <div class="page-header">
@@ -179,8 +179,6 @@ if (has_capability('mod/widget:createvideo', $context)) {
         <div class="col-md-5">
           <div class="row">
             <div class="col-md-12">
-              <a id="call" href="#" class="btn btn-success">
-                <span class="glyphicon glyphicon-play" style="display: none"></span> Start</a>
               <a id="viewer" href="#" class="btn btn-primary">
                 <span class="glyphicon glyphicon-user"></span> Watch</a>
               <a id="terminate" href="#" class="btn btn-danger">
